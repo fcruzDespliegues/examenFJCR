@@ -10,7 +10,7 @@ import javax.swing.DefaultComboBoxModel;
 
 /**
  *
- * @author javier
+ * @author Francisco Javier Cruz Redondo
  */
 public class ElegirCaracteristica extends javax.swing.JDialog {
 

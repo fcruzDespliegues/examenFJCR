@@ -7,7 +7,7 @@ package main;
 
 /**
  *
- * @author javier
+ * @author Francisco Javier Cruz Redondo
  */
 public class IntroducirBusqueda extends javax.swing.JDialog {
     private int aceptarCancelar;

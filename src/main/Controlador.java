@@ -16,7 +16,7 @@ import org.hibernate.Transaction;
 
 /**
  *
- * @author javier
+ * @author Francisco Javier Cruz Redondo
  */
 public class Controlador {
 

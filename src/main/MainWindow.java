@@ -11,7 +11,7 @@ import newpackage.Film;
 
 /**
  *
- * @author javier
+ * @author Francisco Javier Cruz Redondo
  */
 public class MainWindow extends javax.swing.JFrame {
     private String busqueda;
