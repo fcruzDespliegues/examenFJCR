@@ -28,13 +28,17 @@ public class ElegirCaracteristica extends javax.swing.JDialog {
 
         iniciarComponentes();
     }
-
+    /**
+     * Iniciamos componentes
+     */
     public void iniciarComponentes() {
         modeloCombo = new DefaultComboBoxModel();
         aceptarCancelar = 0;
         cargarCombo();
     }
-
+    /**
+     * metodo para cargar combo
+     */
     public void cargarCombo() {
         for (String str : cadenas) {
             modeloCombo.addElement(str);
@@ -42,20 +46,28 @@ public class ElegirCaracteristica extends javax.swing.JDialog {
         
         comboBox.setModel(modeloCombo);
     }
-
+    /**
+     * Obtenemos elemento seleccionado
+     */
     public String getSelectedItem() {
         return (String) comboBox.getSelectedItem();
     }
-    
+    /**
+     * Obtenemos aceptar o cancelar
+     */
     public int getAceptarCancelar(){
         return aceptarCancelar;
     }
-    
+    /**
+     * Metodo aceptar
+     */
     public void aceptar(){
         aceptarCancelar = 1;
         this.dispose();
     }
-    
+    /**
+     * Metodo cancelar
+     */
     public void cancelar(){
         aceptarCancelar = -1;
         this.dispose();

@@ -20,25 +20,35 @@ public class IntroducirBusqueda extends javax.swing.JDialog {
         
         iniciarComponentes();
     }
-    
+    /**
+     * Iniciamos componentes
+     */
     public void iniciarComponentes(){
         aceptarCancelar = 0;
     }
-    
+    /**
+     * metodo aceptar
+     */
     public void aceptar(){
         aceptarCancelar = 1;
         this.dispose();
     }
-    
+    /**
+     * metodo cancelar
+     */
     public void cancelar(){
         aceptarCancelar = -1;
         this.dispose();
     }
-    
+    /**
+     * Retornamos aceptar o cancelar
+     */
     public int getAceptarCancelar(){
         return aceptarCancelar;
     }
-    
+    /**
+     * devolvemos una busqueda
+     */
     public String getBusqueda(){
         return inputTextBusqueda.getText();
     }

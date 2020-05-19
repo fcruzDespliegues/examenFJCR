@@ -19,7 +19,9 @@ import org.hibernate.Transaction;
  * @author Francisco Javier Cruz Redondo
  */
 public class Controlador {
-
+    /**
+     * Metodo listar
+     */
     public List<Film> listar(){
         List<Film> films = null;
         
@@ -36,7 +38,9 @@ public class Controlador {
         
         return films;
     }
-    
+    /**
+     * Metodo buscar peliculas
+     */
     public List<Film> buscarPeliculas(String pelicula){
         List<Film> films = null;
         pelicula = "'%" + pelicula + "%'";
@@ -55,7 +59,9 @@ public class Controlador {
         
         return films;
     }
-    
+    /**
+     * Metodo buscar por categoria
+     */
     public List<Film> buscarPorCategoria(String categoria){
         List<Film> films = null;
         categoria = "'%" + categoria + "%'";
@@ -77,7 +83,9 @@ public class Controlador {
         
         return films;
     }
-    
+    /**
+     * Metodo buscar por categorias especiales
+     */
     public List<Film> buscarPorCaracteristicasEspeciales(String caracteristicas){
         List<Film> films = null;
         caracteristicas = "'%" + caracteristicas + "%'";
@@ -96,7 +104,9 @@ public class Controlador {
         
         return films;
     }
-    
+    /**
+     * Metodo para obtener categorias
+     */
     public List<String> categorias(){
         List<String> categorias = null;
         
@@ -114,7 +124,9 @@ public class Controlador {
         
         return categorias;
     }
-    
+    /**
+     * Listar categorias
+     */
     public ArrayList<String> arrayCategorias(){
         List<String> categorias = categorias();
         ArrayList<String> aux = new ArrayList<>();
@@ -125,7 +137,9 @@ public class Controlador {
         
         return aux;
     }
-    
+    /**
+     * Metodo para devolver caracteristicas
+     */
     public List<String> caracteristicas(){
         List<String> caracteristicas = null;
         
@@ -143,7 +157,9 @@ public class Controlador {
         
         return caracteristicas;
     }
-    
+    /**
+     * Listar caracteristicas
+     */
     public ArrayList<String> arrayCaracteristicas(){
         ArrayList<String> aux = new ArrayList<>();
         List<String> list = caracteristicas();
@@ -155,7 +171,9 @@ public class Controlador {
         
         return aux;
     }
-    
+    /**
+     * Listar las diferentes caracteristicas
+     */
     public ArrayList<String> distinctCaracteristicas(){
         ArrayList<String> caracteristicas = new ArrayList<>();
         

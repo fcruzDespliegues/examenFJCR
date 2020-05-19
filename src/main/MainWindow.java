@@ -28,6 +28,9 @@ public class MainWindow extends javax.swing.JFrame {
         iniciarComponentes();
     }
     
+    /**
+     * Iniciamos componentes
+     */
     public void iniciarComponentes(){
         busqueda = "";
         peliculas = null;
@@ -36,6 +39,9 @@ public class MainWindow extends javax.swing.JFrame {
         actionButtonListar();
     }
     
+    /**
+     * Iniciamos tabla
+     */
     public void iniciarTabla(){
         modeloTabla.addColumn("Título");
         modeloTabla.addColumn("Año");
@@ -45,6 +51,9 @@ public class MainWindow extends javax.swing.JFrame {
         tabla.setModel(modeloTabla);
     }
     
+    /**
+     * Actualizamos tabla
+     */
     public void actualizarTabla(){
         limpiarTabla();
         
@@ -54,6 +63,9 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * Limpiamos tabla
+     */
     public void limpiarTabla(){
         int rows = modeloTabla.getRowCount();
         
@@ -61,20 +73,28 @@ public class MainWindow extends javax.swing.JFrame {
             modeloTabla.removeRow(0);
         }
     }
-    
+    /**
+     * Obtenemos listado de peliculas
+     */
     public void listar(){
         peliculas = controlador.listar();
     }
-    
+    /**
+     * Boton para listar peliculas y actualizar tabla
+     */
     public void actionButtonListar(){
         listar();
         actualizarTabla();
     }
-    
+    /**
+     * metodo para buscar nombre
+     */
     public void buscarNombre(){
         peliculas = controlador.buscarPeliculas(busqueda);
     }
-    
+    /**
+     * Boton para buscar nombre
+     */
     public void actionButtonBuscarNombre(){
         IntroducirBusqueda dialogoBusqueda = new IntroducirBusqueda(this, true);
         dialogoBusqueda.setVisible(true);
@@ -85,11 +105,15 @@ public class MainWindow extends javax.swing.JFrame {
             actualizarTabla();
         }
     }
-    
+    /**
+     * metodo para buscar categoria
+     */
     public void buscarCategoria(){
         peliculas = controlador.buscarPorCategoria(busqueda);
     }
-    
+    /**
+     * Boton para buscar categoria
+     */
     public void actionButtonBuscarCategoria(){
         ElegirCaracteristica ec = new ElegirCaracteristica(this, true, controlador.arrayCategorias());
         ec.setVisible(true);
@@ -100,11 +124,15 @@ public class MainWindow extends javax.swing.JFrame {
             actualizarTabla();
         }
     }
-    
+    /**
+     * metodo para buscar caracteristica
+     */
     public void buscarCaracteristica(){
         peliculas = controlador.buscarPorCaracteristicasEspeciales(busqueda);
     }
-    
+    /**
+     * Boton para buscar caracteristica
+     */
     public void actionButtonBuscarCaracteristicas(){
         ElegirCaracteristica ec = new ElegirCaracteristica(this, true, controlador.distinctCaracteristicas());
         ec.setVisible(true);
